@@ -9,7 +9,7 @@ Ce site web a été réalisé dans le cadre de mon **stage de développement web
 
 ## 🌐 Aperçu du site
 
-➡️ **Démo en ligne** : *(https://yacinebld.github.io/artem-site/)*  
+➡️ **Démo en ligne** : *(https://yacinebld.github.io/ARTEM-site/)*  
 
 ---
 
