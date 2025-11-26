@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Activités - ARTEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .activities-section {
+            padding: 120px 1rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .activities-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/activities-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 100px 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 1200px) {
+            .service-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .projects-section {
+            background-color: var(--light-gray);
+            padding: 4rem 1rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .expertise-section {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .expertise-item {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .expertise-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid var(--white);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">ARTEM</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="societe.html">Société</a></li>
+                <li><a href="activites.html" class="active">Activités</a></li>
+                <li><a href="carriere.html">Carrière</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider">
+                    <i class="fas fa-sun slider-icon sun"></i>
+                    <i class="fas fa-moon slider-icon moon"></i>
+                </div>
+            </label>
+        </div>
+    </header>
+
+    <main> 
+        <div class="activities-hero" data-aos="fade-up">
+            <h1>Nos Activités</h1>
+            <br>
+            <p>Chez ARTEM, nous nous spécialisons dans le transport sécurisé d'œuvres d'art</p>
+        </div>
+
+        <section class="activities-section">
+            <div class="service-details">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-image">
+                        <img src="images/transport.png" alt="Transport d'Œuvres d'Art">
+                    </div>
+                    <div class="service-content">
+                        <h3>Transport Spécialisé</h3>
+                        <p>Notre expertise en transport d'œuvres d'art garantit la sécurité et l'intégrité de vos pièces précieuses.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Véhicules adaptés et sécurisés</li>
+                            <li><i class="fas fa-check"></i> Équipe formée à la manipulation d'œuvres d'art (Manipulation/Prestation avec gants blancs)</li>                            
+                            <li><i class="fas fa-check"></i> Transport national</li>
+                            <li><i class="fas fa-check"></i> Assurance spécialisée</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image">
+                        <img src="images/emballage.png" alt="Emballage Professionnel">
+                    </div>
+                    <div class="service-content">
+                        <h3>Emballage Professionnel</h3>
+                        <p>Nous utilisons des techniques d'emballage adaptées à chaque type d'œuvre.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Matériaux de haute qualité</li>
+                            <li><i class="fas fa-check"></i> Caisses sur mesure</li>
+                            <li><i class="fas fa-check"></i> Protection contre les chocs et vibrations</li>
+                            <li><i class="fas fa-check"></i> Emballage respectueux de l'environnement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="images/stockage.png" alt="Stockage Sécurisé">
+                    </div>
+                    <div class="service-content">
+                        <h3>Stockage Sécurisé</h3>
+                        <p>Nos installations de stockage répondent aux normes les plus strictes.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Environnement contrôlé et adapté</li>
+                            <li><i class="fas fa-check"></i> Système de sécurité 24/7</li>
+                            <li><i class="fas fa-check"></i> Accès réglementé</li>
+                            <li><i class="fas fa-check"></i> Inventaire numérique</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 data-aos="fade-up">Besoin d'un devis personnalisé ?</h2>
+                <p data-aos="fade-up">Contactez-nous pour discuter de vos besoins spécifiques</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button">Contactez-nous</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ARTEM</h3>
+                <p>75 Allée du Colonel Fabien<br>93320 Les Pavillons-sous-Bois</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="societe.html">Société</a></li>
+                    <li><a href="activites.html">Activités</a></li>
+                    <li><a href="carriere.html">Carrière</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ARTEM. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

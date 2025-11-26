@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTEM - Transport Fine Art</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">ARTEM</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="societe.html">Société</a></li>
+                <li><a href="activites.html">Activités</a></li>
+                <li><a href="carriere.html">Carrière</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider">
+                    <i class="fas fa-sun slider-icon sun"></i>
+                    <i class="fas fa-moon slider-icon moon"></i>
+                </div>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" data-aos="fade-up">
+            <div class="hero-content">
+                <h1 style="background-image: linear-gradient(to right, #292828, #ffffff); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 4rem;">ARTEM
+                </h1>
+                <h2>Transport Sécurisé d'Œuvres d'Art</h2>
+                <p style="font-size: 1.1rem; background-color: rgba(0, 0, 0, 0.05); padding: 5px; border-radius: 5px;">
+                    Expertise et sécurité pour le transport de vos trésors artistiques.
+                </p>
+                <br><br>
+                <a href="contact.html" class="cta-button"><strong>Demander un devis</strong></a>
+            </div>
+        </section>
+    
+        <section class="about-us" data-aos="fade-up">
+            <h2>À propos de nous</h2>
+            <div class="about-content">
+                <p class="about-intro">ARTEM est une entreprise spécialisée dans le transport sécurisé d'œuvres d'art, sculptures et objets précieux. Nous mettons notre expertise au service des musées, galeries et collectionneurs pour assurer un transport sans risque.</p>
+                
+                <div class="services-list">
+                    <div class="service-item" data-aos="fade-right">
+                        <span class="bullet">▶</span>
+                        <strong>Emballage sur-mesure</strong> : Protection optimale adaptée à chaque type d'œuvre.
+                    </div>
+                    <div class="service-item" data-aos="fade-right" data-aos-delay="100">
+                        <span class="bullet">▶</span>
+                        <strong>Transport sécurisé</strong> : Véhicules adaptés et surveillance GPS 24/7.
+                    </div>
+                    <div class="service-item" data-aos="fade-right" data-aos-delay="200">
+                        <span class="bullet">▶</span>
+                        <strong>Stockage sécurisé</strong> : Espaces dédiés avec contrôle d’humidité et sécurité renforcée.
+                    </div>
+                    <div class="service-item" data-aos="fade-right" data-aos-delay="300">
+                        <span class="bullet">▶</span>
+                        <strong>Assurance complète</strong> : Couverture contre tous les risques pour une sérénité totale.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-gallery" data-aos="fade-up">
+            <h2>Nos Réalisations</h2>
+            <br>
+            <p class="gallery-intro">Découvrez en images nos solutions de transport, d'emballage et de stockage</p>
+            
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/contenaire1.jpg" alt="Contenaire de stockage sécurisé">
+                            <div class="slide-caption">Stockage sécurisé</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/contenaire2.jpg" alt="Contenaire spécialisé pour œuvres d'art">
+                            <div class="slide-caption">Solutions de stockage adaptées</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/contenaire3.jpg" alt="Espace de stockage sécurisé">
+                            <div class="slide-caption">Espaces dédiés aux œuvres d'art</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/emballage1.jpg" alt="Emballage sur-mesure pour œuvre d'art">
+                            <div class="slide-caption">Emballage sur-mesure</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/emballage2.jpg" alt="Protection spéciale pour œuvre fragile">
+                            <div class="slide-caption">Protection optimale</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/transport1.jpg" alt="Transport sécurisé d'œuvres d'art">
+                            <div class="slide-caption">Transport haute sécurité</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-slide">
+                            <img src="images/transport2.jpg" alt="Véhicule spécialisé pour transport d'art">
+                            <div class="slide-caption">Flotte adaptée</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    
+        <section class="services" data-aos="fade-up">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-right">
+                    <i class="fas fa-box"></i>
+                    <h3>Emballage & Protection</h3>
+                    <br>
+                    <p>Solutions adaptées à chaque œuvre pour une sécurité maximale.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fas fa-truck"></i>
+                    <h3>Transport Haute Sécurité</h3>
+                    <br>
+                    <p>Flotte équipée pour assurer un déplacement sans risque.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Stockage & Conservation</h3>
+                    <br>
+                    <p>Espaces sécurisés et adaptés.</p>
+                </div>
+                <div class="service-card" data-aos="fade-left">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Assurance & Suivi</h3>
+                    <br>
+                    <p>Garanties complètes et traçabilité en temps réel.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="partners" data-aos="fade-up">
+            <h2>Nos Partenaires</h2>
+            <p class="partners-intro">Ils nous font confiance pour leurs besoins en transport et emballage d'œuvres d'art</p>
+            
+            <div class="swiper partners-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://www.lec-emballages.fr/portfolio/emballage-industriel/" target="_blank">
+                                <img class="swiper-slide-image" src="images/lec.png" alt="LEC Emballages" data-partner="lec-emballages">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://sefec-emballage.fr/" target="_blank">
+                                <img class="swiper-slide-image" src="images/sefec.png" alt="SEFEC Emballage" data-partner="sefec-emballage">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://leberrevevaud.com/" target="_blank">
+                                <img class="swiper-slide-image" src="images/lbv.png" alt="Leberre Vevaud" data-partner="leberre-vevaud">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://atelier-lumierrante.com/" target="_blank">
+                                <img class="swiper-slide-image" src="images/lumierrante.png" alt="Atelier Lumierrante" data-partner="atelier-lumierrante">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://www.consult-transport.com/" target="_blank">
+                                <img class="swiper-slide-image" src="images/consulttransport.png" alt="Consult Transport" data-partner="consult-transport">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://www.avecvousdesign.com/" target="_blank">
+                                <img class="swiper-slide-image" src="images/avecvousdesign.png" alt="Avec Vous Design" data-partner="avec-vous-design">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://www.convelio.com/fr/accueil/" target="_blank">
+                                <img class="swiper-slide-image" src="images/convelio.png" alt="Convelio" data-partner="convelio">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="#" target="_blank">
+                                <img class="swiper-slide-image" src="images/sudemballage.png" alt="Sud Emballage" data-partner="sud-emballage">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure class="swiper-slide-inner">
+                            <a href="https://roissy-emballage.com/" target="_blank">
+                                <img class="swiper-slide-image" src="images/roissy.png" alt="Roissy Emballage" data-partner="roissy-emballage">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ARTEM</h3>
+                    <p>75 Allée du Colonel Fabien<br>93320 Les Pavillons-sous-Bois</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="societe.html">Société</a></li>
+                        <li><a href="activites.html">Activités</a></li>
+                        <li><a href="carriere.html">Carrière</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTEM. Tous droits réservés.</p>
+            </div>
+        </footer>
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </main>
+
+</body>
+</html>
